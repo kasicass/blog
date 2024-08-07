@@ -4,7 +4,7 @@
 
 下载 FreeBSD-11.2-RELEASE-amd64-disc1.iso，一路安装即可。
 
-* [https://download.freebsd.org/ftp/releases/ISO-IMAGES/11.2/][1]
+* [https://mirrors.ustc.edu.cn/freebsd/releases/ISO-IMAGES/14.1/][1]
 
 ## 基本设置
 
