@@ -33,15 +33,18 @@ PasswordAuthentication yes
 
 ## 软件安装
 
-设置 package mirror
+FreeBSD pkg 包管理器的官方源配置是 /etc/pkg/FreeBSD.conf ，请先检查该文件内容。注意其中的 url 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。
+
+该配置文件是 FreeBSD 基本系统的一部分，会随着 freebsd-update 更新，请不要直接修改，而是创建 /usr/local/etc/pkg/repos/FreeBSD.conf 覆盖配置，文件内容如下：
 
 ```
-# mkdir -p /usr/local/etc/pkg/repos
-# vi /usr/local/etc/pkg/repos/FreeBSD.conf
 FreeBSD: {
   url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 ```
+如果要使用滚动更新的 latest 仓库，把 url 配置最后的 quarterly 换成 latest 即可。
+
+修改配置后，运行 pkg update -f 更新索引。
 
 感谢 [中科大][3]
 
