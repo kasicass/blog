@@ -12,12 +12,20 @@
 
 默认，user 都不能 su。修改 /etc/group，将自己的 user 加入 wheel 组。
 
+```
+# pw groupmod wheel -m kasicass
+
+# cat /etc/group | head
+wheel:*:0:root,kasicass
+...
+```
+
 ### about ssh
 
 默认 ssh 设置为不允许 remote login with password。参考 [这里][2]
 
 ```
-# vi /etc/sshd/sshd_config
+# vi /etc/ssh/sshd_config
 PasswordAuthentication yes
 
 # /etc/rc.d/sshd restart
