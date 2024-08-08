@@ -2,7 +2,7 @@
 
 ## 安装系统
 
-下载 FreeBSD-11.2-RELEASE-amd64-disc1.iso，一路安装即可。
+下载 FreeBSD-14.1-RELEASE-amd64-disc1.iso，一路安装即可。
 
 * [https://mirrors.ustc.edu.cn/freebsd/releases/ISO-IMAGES/14.1/][1]
 
