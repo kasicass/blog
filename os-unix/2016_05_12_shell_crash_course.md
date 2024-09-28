@@ -649,11 +649,6 @@ Introduction to the Command Line
 
  * 还没看过 :-)
 
-自己用过的一些 shell 命令的汇总帖 :-)
-
- * TODO
- * http://kasicass.blog.163.com/blog/static/39561920106135629645/
-
 
 **感谢**
 
