@@ -91,11 +91,6 @@ def genIndexFile(markdownFiles):
 		mds[tag].append(f)
 		hrefs[tag].append(pre + path.join(t, f).replace('\\', '/'))
 
-	# 'roadmap' to 1st
-	n = tags.index('roadmap')
-	tags.pop(n)
-	tags.insert(0, 'roadmap')
-
 	# generate .md
 	result = []
 	i = 1
