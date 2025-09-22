@@ -43,7 +43,7 @@ def genIndexFile(markdownFiles):
 	# * ...
 	# [1]:url
 	# ...
-	pre = 'https://github.com/kasicass/blog/blob/master/'
+	pre = 'https://github.com/kasicass/blog/blob/main/'
 
 	tags  = []
 	mds   = {}
