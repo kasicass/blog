@@ -22,7 +22,7 @@ $ wsgidav --host=0.0.0.0 --port=10086 --root=/home/kasicass/webdav_root --auth=a
 挂接网盘
 
 ```shell
-D:\>net use w: http://10.95.31.201:10086/
+D:\>net use w: http://47.121.137.193:10086/
 命令成功完成。
 ```
 
