@@ -17,6 +17,37 @@ $ wsgidav --host=0.0.0.0 --port=10086 --root=/home/kasicass/webdav_root --auth=a
 ```
 
 
+## Linux Client
+
+使用 [https://rclone.org/][3] 挂载 WebDAV Server。
+
+```shell
+# apt install fuse rclone
+
+# rclone config
+n) new remote
+name> aliyun_webdav
+Storage> webdav
+url> http://47.121.137.193:10086/
+vendor> other
+user> username
+pass> password
+bearer_token> [Enter to skip]
+bearer_token_command> [Enter to skip]
+Edit advanced config (y/n)> n
+
+# rclone listremotes
+aliyun_webdav:
+
+# rclone mount aliyun_webdav: /mnt
+```
+
+
+## OpenBSD Client
+
+OpenBSD 上不支持 FUSE，所以不支持 rclone mount。但 rclone ls 等命令可以用。
+
+
 ## Windows Client
 
 挂接网盘
@@ -46,3 +77,4 @@ w: 已经删除。
 
 [1]:https://www.asustor.com/zh-tw/online/College_topic?topic=208
 [2]:http://www.webdav.org/specs/
+[3]:https://rclone.org/
