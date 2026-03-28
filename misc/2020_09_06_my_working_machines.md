@@ -12,35 +12,20 @@
 
 ![](images/2020_09_06_my_working_machines/cpu.png)
 
+
 ## Laptop
 
-### ROG Zephyrus S15 - 2020
+### Thinkpad X1 Carbon Gen9 - 2022
 
- * CPU: Intel Core i7-10875H
- * GPU: NVIDIA GeForce RTX 2070 SUPER with 8GB GDDR6 VRAM
- * MEM: DDR4 16GB (3200MHz)
- * [Specification][3]
+* CPU: 11th Gen Intel(R) Core(TM) i7-1185G7 (4) @ 4.80 GHz
+* GPU: Intel(R) Iris(R) Xe Graphics (TGL GT2) [Integrated]
+* MEM: 32GB
 
-### ASUS Vivobook 14 X411UN - 2018
+![](images/2020_09_06_my_working_machines/x1carbon.jpg)
 
- * CPU: Intel Core i5-8250U @ 1.6GHz (4 cores)
- * GPU: NVIDIA GeForce MX150
- * Memory: 16G DDR4
- * [Specifiation][13]
+### ROG 幻X
 
-### Macbook Air - 2017
-
- * CPU: Intel Core i7-5650U @ 2.2GHz
- * GPU: Intel HD Graphics 6000
- * Memory: 8GB of 1600MHz LPDDR3 onboard memory
- * [Specifiation][4]
-
-### Macbook Pro - 2010
-
- * CPU: Intel Core 2 Duo P8600 @ 2.4GHz
- * GPU: NVIDIA GeForce 320M graphics processor with 256MB of DDR3 SDRAM shared with main memory
- * Memory: 4GB of 1066MHz DDR3 SDRAM
- * [Specification][5]
+TODO
 
 
 ## Smartphone
@@ -60,9 +45,16 @@
 
 ## History
 
+**2026-03-21**
+
+又回公司开始撸代码，打算彻底用 OpenBSD 作为工作系统，单独安装一台笔记本。去闲鱼淘了台 [Thinkpad X1 Carbon Gen9][14]，跑 OpenBSD 7.8，贼流畅，开心。而且把笔记本重量控制在1kg左右，携带也很方便。
+
+之前的 ASUS Vivobook、ROG Zephyrus S15(冰刃4) 和苹果本们，全部退役了。
+
+
 **2024-09-02**
 
-咸鱼上850淘了一台 [ASUS Vivobook 14 X411UN][13]，轻薄本，用来安装 OpenBSD 7.5。没有具体的项目要求，尝试用 OpenBSD 做桌面系统。
+闲鱼上850淘了一台 [ASUS Vivobook 14 X411UN][13]，轻薄本，用来安装 OpenBSD 7.5。没有具体的项目要求，尝试用 OpenBSD 做桌面系统。
 
 
 **2020-09-29**
@@ -73,6 +65,7 @@
 **2020-09-20**
 
 将 HUAWEI Matebook X Pro 卖了，换了 [MSI Prestige 14 - 2020][12] 作为主力工作本。Matebook 配的 3000x2000 的显示屏，显卡推起来比较吃力，这次 Prestige 14 特意选了只有 1920x1080 的普通屏。
+
 
 **2020-09-13**
 
@@ -92,3 +85,5 @@
 [11]:https://www.notebookcheck.net/Qualcomm-Adreno-630-GPU.299832.0.html
 [12]:https://www.msi.com/Laptop/Prestige-14-A10X/Specification
 [13]:https://kelaptop.com/en/asus-vivobook-x411un-eb253t-90nb0gt3-m03770
+[14]:https://www.productindetail.com/pn/lenovo-thinkpad-x1-carbon-gen-9-20xw
+
