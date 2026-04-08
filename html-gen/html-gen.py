@@ -1,8 +1,8 @@
 # -*- encoding: utf8 -*-
 # platform: python3
 # 
-# python -m pip install Markdown
-# python html-gen.py
+# python3 -m pip install Markdown        # or 'apt install python3-markdown' on Debian
+# python3 html-gen.py
 
 import os
 import glob

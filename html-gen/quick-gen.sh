@@ -1,7 +1,7 @@
 cd ../../kasicass.github.io
 git pull
 cd ../blog/html-gen
-python html-gen.py
+python3 html-gen.py
 cd ../../kasicass.github.io
 git commit -a -m "update"
 git push
