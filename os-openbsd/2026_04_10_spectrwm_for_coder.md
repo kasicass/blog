@@ -12,3 +12,5 @@
 * Mod+Enter, 
 * Mod+j/Mod+k, 切换焦点区域
 * Mod+h/Mod+j, 缩小/扩大当前焦点的区域
+* Mod+p, open dmenu
+  * pkg_add rofi, a dmenu replacer
