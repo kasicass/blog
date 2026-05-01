@@ -2,17 +2,17 @@
 
 works on OpenBSD 7.8
 
-百度网盘网页版，下载大于50M的文件，非得下载客户端。无奈OpenBSD下没有它的客户端。
+百度网盘网页版，下载大于50M的文件，非得下载客户端。无奈 OpenBSD 下没有它的客户端。
 
-那，曲线救国，先从手机下载文件，再把文件上传到我的OpenBSD笔记本上。
+那，曲线救国，先从手机下载文件，再把文件上传到我的 OpenBSD 笔记本上。
 
 
 ## 技术选型
 
-* [httpd][1] - OpenBSD自带的httpd
+* [httpd][1] - OpenBSD 自带的 httpd
 * [php][2] - 一点小尝试
 
-安装PHP
+安装 PHP
 
 ```
 # pkg_add php-8.4.20
@@ -22,11 +22,11 @@ works on OpenBSD 7.8
 ## Round 1 - http/php works
 
 
-### 启动httpd
+### 启动 httpd
 
-httpd的根目录在/var/www，httpd通过chroot切换到/var/www，所以httpd.conf中的目录，是基于/var/www的。
+httpd 的根目录在 /var/www，httpd 通过 chroot 切换到 /var/www，所以 httpd.conf 中的目录，是基于 /var/www的。
 
-编辑/etc/httpd.conf
+编辑 /etc/httpd.conf
 
 ```
 types {
@@ -45,7 +45,7 @@ server "default" {
 }
 ```
 
-httpd和php_fpm通过fastcgi通讯。/run/php-fpm.sock 实际对应 /var/www/run/php-fpm.sock
+httpd 和 php_fpm 通过 fastcgi 通讯。/run/php-fpm.sock 实际对应 /var/www/run/php-fpm.sock
 
 启动服务
 
@@ -65,7 +65,7 @@ httpd和php_fpm通过fastcgi通讯。/run/php-fpm.sock 实际对应 /var/www/run
 * 看能否正常访问
 
 
-### 启动php84_fpm
+### 启动 php84_fpm
 
 添加基础配置
 
@@ -88,16 +88,16 @@ httpd和php_fpm通过fastcgi通讯。/run/php-fpm.sock 实际对应 /var/www/run
 ```
 
 * 打开网页：http://localhost/
-* 测试php是否工作
+* 测试 php 是否工作
 
 
 ## Round 2 - a simple file upload html
 
-* 一个简单页面，只有一个Upload按钮
-* 将文件保存到/var/www/htdocs/uploads目录
+* 一个简单页面，只有一个 Upload 按钮
+* 将文件保存到 /var/www/htdocs/uploads 目录
 * /var/www/htdocs/b.php
 
-创建uploads目录
+创建 uploads 目录
 
 ```
 # cd /var/www/htdocs
@@ -106,7 +106,7 @@ httpd和php_fpm通过fastcgi通讯。/run/php-fpm.sock 实际对应 /var/www/run
 # chmod 755 uploads
 ```
 
-b.php的内容
+创建 b.php
 
 ```php
 <?php
@@ -133,14 +133,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 
 * 一切就绪。访问：http://localhost/b.php
 * 上传～
-* 但，居然提示"413 payload too large"
+* 但，居然提示 "413 payload too large"
 
 
 ## Round 3 - fix 413 error
 
 我上传的文件80M，超过了默认配置。
 
-修改httpd.conf
+修改 httpd.conf
 
 ```
 server "default" {
@@ -149,7 +149,7 @@ server "default" {
 }
 ```
 
-修改/etc/php-8.4.ini
+修改 /etc/php-8.4.ini
 
 ```ini
 ; listen on * port 80
