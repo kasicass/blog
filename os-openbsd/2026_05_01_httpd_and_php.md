@@ -61,7 +61,8 @@ httpd和php_fpm通过fastcgi通讯。/run/php-fpm.sock 实际对应 /var/www/run
 # echo "httpd runs~" > a.html
 ```
 
-浏览器打开http://localhost/a.html，看能否正常访问。
+* 打开网页：http://localhost/a.html
+* 看能否正常访问
 
 
 ### 启动php84_fpm
@@ -86,7 +87,8 @@ httpd和php_fpm通过fastcgi通讯。/run/php-fpm.sock 实际对应 /var/www/run
 # echo "<?php phpinfo(); ?>" > index.html
 ```
 
-浏览器打开http://localhost/，测试php是否工作。
+* 打开网页：http://localhost/
+* 测试php是否工作
 
 
 ## Round 2 - a simple file upload html
@@ -129,9 +131,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 </form>
 ```
 
-看起来，一切就绪。访问http://localhost/b.php。上传～
-
-但，居然提示"413 payload too large"
+* 一切就绪。访问：http://localhost/b.php
+* 上传～
+* 但，居然提示"413 payload too large"
 
 
 ## Round 3 - fix 413 error
