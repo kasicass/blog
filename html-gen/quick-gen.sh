@@ -1,3 +1,4 @@
+#!/bin/sh
 cd ../../kasicass.github.io
 git pull
 cd ../blog/html-gen
