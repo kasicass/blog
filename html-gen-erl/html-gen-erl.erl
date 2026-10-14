@@ -30,14 +30,9 @@ gen_tag_files(Files) ->
     TagFiles1.
 
 %% make [minibook] come first
-gen_minibook(TagFiles1) ->
-    TagFiles2 = lists:sort(fun (X) ->
-            {Tag, _} = X,
-            Tag == "minibook"
-        end,
-        TagFiles1
-    ),
-    TagFiles2.
+gen_minibook(TagFiles) ->
+    {Minibook, Rest} = lists:partition(fun(X) -> X =:= "minibook" end, TagFiles),
+    Minibook ++ Rest.
 
 %% [{"<h2>os-freebsd</h2>", "<li>2014_09_23_name.md</li>"}, ...]
 gen_tag_urls([], _, Result) ->
@@ -86,3 +81,4 @@ output_to_file(Html) ->
     {ok, Fd} = file:open(?OUTPUT_FILE, [write]),
     file:write(Fd, Html),
     file:close(Fd).
+
